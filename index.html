@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, My Love ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===== MUSIC PLAYER ===== -->
+  <div class="music-player" id="musicPlayer">
+    <button class="music-btn" id="musicBtn" aria-label="Play music">
+      <span class="music-icon">♪</span>
+    </button>
+    <span class="music-label">Our Song</span>
+    <audio id="bgMusic" loop>
+      <source src="assets/music.mp3" type="audio/mpeg"/>
+    </audio>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <canvas id="starCanvas"></canvas>
+    <div class="petals-container" id="petals"></div>
+    <div class="hearts-container" id="hearts"></div>
+
+    <div class="hero-content">
+      <div class="sparkle-ring"></div>
+      <p class="hero-eyebrow">A love letter in pixels</p>
+      <h1 class="hero-title">Happy Birthday,<br/><span class="name-highlight">My Love</span> ❤️</h1>
+      <p class="hero-subtitle">Every love story is beautiful,<br/>but ours is my favorite.</p>
+      <button class="begin-btn" id="beginBtn">Begin Our Journey</button>
+    </div>
+  </section>
+
+  <!-- ===== COUNTDOWN ===== -->
+  <section class="section countdown-section" id="countdown">
+    <div class="section-inner">
+      <p class="section-eyebrow">Counting Down To</p>
+      <h2 class="section-title">Your Special Day</h2>
+      <div class="countdown-display" id="countdownDisplay">
+        <div class="count-unit">
+          <span class="count-num" id="days">00</span>
+          <span class="count-label">Days</span>
+        </div>
+        <div class="count-sep">:</div>
+        <div class="count-unit">
+          <span class="count-num" id="hours">00</span>
+          <span class="count-label">Hours</span>
+        </div>
+        <div class="count-sep">:</div>
+        <div class="count-unit">
+          <span class="count-num" id="minutes">00</span>
+          <span class="count-label">Minutes</span>
+        </div>
+        <div class="count-sep">:</div>
+        <div class="count-unit">
+          <span class="count-num" id="seconds">00</span>
+          <span class="count-label">Seconds</span>
+        </div>
+      </div>
+      <div class="birthday-msg hidden" id="birthdayMsg">
+        <h2 class="bday-title">Happy Birthday ❤️</h2>
+        <canvas id="fireworksCanvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOVE STORY TIMELINE ===== -->
+  <section class="section timeline-section" id="timeline">
+    <div class="section-inner">
+      <p class="section-eyebrow">Our Journey</p>
+      <h2 class="section-title">Our Love Story</h2>
+      <div class="timeline">
+        <div class="timeline-card left reveal">
+          <div class="tl-dot">✨</div>
+          <div class="tl-content glass-card">
+            <span class="tl-date">Day One</span>
+            <h3>The Day We Met</h3>
+            <p>The universe conspired to bring two souls together. I didn't know it then, but that moment changed everything.</p>
+          </div>
+        </div>
+        <div class="timeline-card right reveal">
+          <div class="tl-dot">💬</div>
+          <div class="tl-content glass-card">
+            <span class="tl-date">First Words</span>
+            <h3>Our First Conversation</h3>
+            <p>Words flowed like we'd known each other forever. I stayed up too late, and I didn't mind at all.</p>
+          </div>
+        </div>
+        <div class="timeline-card left reveal">
+          <div class="tl-dot">🌹</div>
+          <div class="tl-content glass-card">
+            <span class="tl-date">First Date</span>
+            <h3>The Beginning</h3>
+            <p>Nervous smiles, warm eyes, and a feeling I couldn't name yet — but I knew I never wanted it to end.</p>
+          </div>
+        </div>
+        <div class="timeline-card right reveal">
+          <div class="tl-dot">📸</div>
+          <div class="tl-content glass-card">
+            <span class="tl-date">First Photo</span>
+            <h3>First Photo Together</h3>
+            <p>Captured in light — the moment I knew I wanted a thousand more photos with you.</p>
+          </div>
+        </div>
+        <div class="timeline-card left reveal">
+          <div class="tl-dot">✈️</div>
+          <div class="tl-content glass-card">
+            <span class="tl-date">Adventures</span>
+            <h3>First Trip Together</h3>
+            <p>Every new place is more beautiful when I see it through your eyes. You make the world feel alive.</p>
+          </div>
+        </div>
+        <div class="timeline-card right reveal">
+          <div class="tl-dot">🎂</div>
+          <div class="tl-content glass-card">
+            <span class="tl-date">Today</span>
+            <h3>Your Birthday</h3>
+            <p>Today the world celebrates the day you were born — and I celebrate the day my life truly began.</p>
+          </div>
+        </div>
+        <div class="timeline-card left reveal">
+          <div class="tl-dot">∞</div>
+          <div class="tl-content glass-card">
+            <span class="tl-date">Always</span>
+            <h3>Forever Begins</h3>
+            <p>This is not an ending. Every moment with you is the beginning of something more beautiful.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEMORY GALLERY ===== -->
+  <section class="section gallery-section" id="gallery">
+    <div class="section-inner">
+      <p class="section-eyebrow">Memories We've Made</p>
+      <h2 class="section-title">Our Gallery</h2>
+      <div class="polaroid-grid" id="polaroidGrid">
+        <!-- Polaroids injected by JS -->
+      </div>
+    </div>
+    <!-- Lightbox -->
+    <div class="lightbox hidden" id="lightbox">
+      <button class="lb-close" id="lbClose">✕</button>
+      <button class="lb-nav lb-prev" id="lbPrev">❮</button>
+      <div class="lb-content">
+        <img id="lbImg" src="" alt="Memory"/>
+        <p class="lb-caption" id="lbCaption"></p>
+      </div>
+      <button class="lb-nav lb-next" id="lbNext">❯</button>
+    </div>
+  </section>
+
+  <!-- ===== LOVE LETTER ===== -->
+  <section class="section letter-section" id="letter">
+    <div class="section-inner">
+      <p class="section-eyebrow">Written From The Heart</p>
+      <h2 class="section-title">A Letter For You</h2>
+      <div class="envelope-wrap">
+        <div class="envelope" id="envelope">
+          <div class="env-flap"></div>
+          <div class="env-body">
+            <div class="env-seal">❤️</div>
+            <p class="env-hint">Click to open</p>
+          </div>
+        </div>
+        <div class="letter-card hidden" id="letterCard">
+          <div class="letter-lines"></div>
+          <p class="letter-text" id="letterText"></p>
+          <p class="letter-sign">With all my love ❤️</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REASONS I LOVE YOU ===== -->
+  <section class="section reasons-section" id="reasons">
+    <div class="section-inner">
+      <p class="section-eyebrow">From My Heart</p>
+      <h2 class="section-title">Reasons I Love You</h2>
+      <div class="reasons-grid">
+        <div class="reason-card glass-card reveal"><span class="reason-icon">😊</span><p>Your smile</p></div>
+        <div class="reason-card glass-card reveal"><span class="reason-icon">💛</span><p>Your kindness</p></div>
+        <div class="reason-card glass-card reveal"><span class="reason-icon">😂</span><p>Your laugh</p></div>
+        <div class="reason-card glass-card reveal"><span class="reason-icon">🤝</span><p>Your support</p></div>
+        <div class="reason-card glass-card reveal"><span class="reason-icon">💖</span><p>Your heart</p></div>
+        <div class="reason-card glass-card reveal"><span class="reason-icon">🌸</span><p>Your grace</p></div>
+        <div class="reason-card glass-card reveal"><span class="reason-icon">🌟</span><p>Your strength</p></div>
+        <div class="reason-card glass-card reveal"><span class="reason-icon">🧠</span><p>Your mind</p></div>
+        <div class="reason-card glass-card reveal"><span class="reason-icon">🌙</span><p>Your dreams</p></div>
+        <div class="reason-card glass-card reveal"><span class="reason-icon">🎵</span><p>Your voice</p></div>
+        <div class="reason-card glass-card reveal"><span class="reason-icon">🤗</span><p>Your warmth</p></div>
+        <div class="reason-card glass-card reveal"><span class="reason-icon">✨</span><p>Everything about you</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GIFT BOX ===== -->
+  <section class="section gift-section" id="gift">
+    <div class="section-inner">
+      <p class="section-eyebrow">Something Special</p>
+      <h2 class="section-title">A Gift For You</h2>
+      <div class="gift-wrap" id="giftWrap">
+        <div class="gift-box" id="giftBox">
+          <div class="gift-ribbon-h"></div>
+          <div class="gift-ribbon-v"></div>
+          <div class="gift-bow" id="giftBow">🎀</div>
+          <div class="gift-lid" id="giftLid"></div>
+          <div class="gift-body">
+            <div class="gift-shine"></div>
+          </div>
+        </div>
+        <p class="gift-hint" id="giftHint">Click the gift box!</p>
+        <div class="gift-message hidden" id="giftMessage">
+          <p>My greatest gift is having you.</p>
+        </div>
+      </div>
+      <canvas class="confetti-canvas hidden" id="confettiCanvas"></canvas>
+    </div>
+  </section>
+
+  <!-- ===== BIRTHDAY CAKE ===== -->
+  <section class="section cake-section" id="cake">
+    <div class="section-inner">
+      <p class="section-eyebrow">Make a Wish</p>
+      <h2 class="section-title">Blow Out the Candles</h2>
+      <div class="cake-wrap">
+        <div class="cake" id="cakeEl">
+          <div class="candles-row" id="candlesRow">
+            <div class="candle" data-lit="true"><div class="flame"></div></div>
+            <div class="candle" data-lit="true"><div class="flame"></div></div>
+            <div class="candle" data-lit="true"><div class="flame"></div></div>
+            <div class="candle" data-lit="true"><div class="flame"></div></div>
+            <div class="candle" data-lit="true"><div class="flame"></div></div>
+          </div>
+          <div class="cake-top">
+            <span class="cake-deco">Happy Birthday</span>
+          </div>
+          <div class="cake-mid"></div>
+          <div class="cake-bot"></div>
+          <div class="cake-plate"></div>
+        </div>
+        <p class="cake-hint" id="cakeHint">Click the candles to blow them out!</p>
+        <p class="wish-msg hidden" id="wishMsg">Make a wish ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL MESSAGE ===== -->
+  <section class="section final-section" id="final">
+    <canvas id="finalCanvas"></canvas>
+    <div class="final-hearts" id="finalHearts"></div>
+    <div class="final-content reveal">
+      <p class="final-text">
+        I don't know where life will take us,<br/>
+        but if I have you,<br/>
+        I'll always be home.
+      </p>
+      <p class="final-bday">Happy Birthday ❤️</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>Made with endless love by <span class="footer-name">Your Name</span> ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
