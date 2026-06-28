@@ -294,7 +294,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 /* ============ GALLERY ============ */
 const photos = [
-  { src: 'assets/photo1.jpg', caption: 'The beginning of everything ❤️' },
+  { src: 'photo1.jpg', caption: 'The beginning of everything ❤️' },
   { src: 'assets/photo2.jpg', caption: 'Your smile lights up every room' },
   { src: 'assets/photo3.jpg', caption: 'Adventures are better with you' },
   { src: 'assets/photo4.jpg', caption: 'Every moment, a treasure' },
